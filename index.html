@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finn Hecker | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h1>Finn Hecker</h1>
+    </div>
+    <div class="menu-icon" id="menu-icon">
+      <!-- Hamburger-Icon -->
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#cv">Lebenslauf</a></li>
+      <li><a href="#projects">Projekte</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Bereich mit animiertem Farbverlauf -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h2 class="fade-in-on-load">Hallo, ich bin</h2>
+        <h1 class="fade-in-on-load">Finn Hecker</h1>
+        <p class="fade-in-on-load">Full Stack Developer &amp; Technik-Enthusiast</p>
+        <a href="#projects" class="btn-hero fade-in-on-load">Zu meinen Projekten</a>
+      </div>
+    </div>
+    <!-- Wellen-Linie (SVG) unten im Hero -->
+    <div class="wave" aria-hidden="true">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+        <path d="M0,49.98 C150,150 350,-50 500,49.98 L500,0 L0,0 Z"></path>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Skills Abschnitt -->
+  <section id="skills" class="skills-section reveal">
+    <h2>Meine Fähigkeiten</h2>
+    <div class="skill-bars">
+      <div class="skill">
+        <span class="skill-title">HTML</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-skill="95"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-title">CSS</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-skill="85"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-title">JavaScript</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-skill="80"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-title">Java</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-skill="65"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-title">C#</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-skill="50"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span class="skill-title">Python</span>
+        <div class="skill-bar">
+          <div class="skill-level" data-skill="80"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lebenslauf Abschnitt (Animierte Timeline) -->
+  <section id="cv" class="cv-section reveal">
+    <h2>Lebenslauf</h2>
+    <div class="timeline">
+      <div class="timeline-item" data-direction="left">
+        <div class="timeline-date">26.09.2002</div>
+        <div class="timeline-content">
+          <h3>Geburt</h3>
+          <p>Geboren in Schleswig.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-direction="right">
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>Abitur</h3>
+          <p>Abschluss des Abiturs.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-direction="left">
+        <div class="timeline-date">2024 - heute</div>
+        <div class="timeline-content">
+          <h3>Studium Informatik</h3>
+          <p>Beginn des Informatikstudiums an der FH Flensburg.</p>
+        </div>
+      </div>
+      <div class="timeline-item" data-direction="right">
+        <div class="timeline-date">2024 - heute</div>
+        <div class="timeline-content">
+          <h3>Werkstudent bei Jesse und Partner</h3>
+          <p>Tätigkeit als Werkstudent mit Fokus auf praktische Erfahrungen und berufliche Weiterentwicklung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Projekte Abschnitt -->
+  <section id="projects" class="projects-section reveal">
+    <h2>Meine Projekte</h2>
+    <!-- Filter-Buttons -->
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Alle</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="ai">KI</button>
+      <button class="filter-btn" data-filter="3d">3D/AR</button>
+    </div>
+
+    <!-- Projekt-Galerie -->
+    <div class="project-gallery"></div>
+  </section>
+
+  <!-- Kontakt Abschnitt -->
+  <section id="contact" class="contact-section reveal">
+    <h2>Kontakt</h2>
+    <form class="contact-form">
+      <p>Du möchtest mit mir zusammenarbeiten oder hast Fragen? Schreib mir gerne eine Nachricht!</p>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Dein Name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Deine Email" required />
+
+      <label for="message">Nachricht:</label>
+      <textarea id="message" rows="5" placeholder="Deine Nachricht" required></textarea>
+
+      <button type="submit">Senden</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Finn Hecker. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
